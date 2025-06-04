@@ -222,7 +222,7 @@ function Analytics() {
   }
 
   return (
-    <div className="space-y-6 p-10">
+    <div className=" max-h-screen overflow-y-auto space-y-6 p-10">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800">
           Analytics Dashboard

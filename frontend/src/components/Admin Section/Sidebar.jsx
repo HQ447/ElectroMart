@@ -102,7 +102,7 @@ function Sidebar({ onToggle, isCollapsed }) {
       to={item.to}
       end={item.exact}
       className={({ isActive }) =>
-        `group flex items-center px-3 py-2.5  rounded-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02] relative overflow-hidden ${
+        ` flex items-center py-2 px-2 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02] relative overflow-hidden ${
           isActive
             ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md shadow-blue-500/25"
             : "text-slate-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700 border border-transparent hover:border-blue-100/50 hover:shadow-sm"
@@ -133,13 +133,13 @@ function Sidebar({ onToggle, isCollapsed }) {
               {item.icon}
             </span>
             {(!collapsed || window.innerWidth < 768) && (
-              <span className="ml-3 font-medium text-sm tracking-wide transition-all duration-300">
+              <span className=" font-medium text-sm tracking-wide transition-all duration-300">
                 {item.text}
               </span>
             )}
           </div>
           {(!collapsed || window.innerWidth < 768) && item.badge && (
-            <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-sm animate-pulse relative z-10 border border-white/20">
+            <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-white text-xs font-bold  py-0.5 rounded-full shadow-sm animate-pulse relative z-10 border border-white/20">
               {item.badge}
             </span>
           )}
@@ -156,7 +156,7 @@ function Sidebar({ onToggle, isCollapsed }) {
   }
 
   return (
-    <>
+    <div className="max-h-screen overflow-y-auto w-[25%]">
       {/* Mobile Overlay */}
       {mobileOpen && (
         <div
@@ -261,7 +261,7 @@ function Sidebar({ onToggle, isCollapsed }) {
             {navItems.map((item, index) => (
               <div
                 key={index}
-                className="transform transition-all duration-300 hover:translate-x-1"
+                className="transform  transition-all duration-300 hover:translate-x-1"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <NavItem item={item} />
@@ -311,7 +311,7 @@ function Sidebar({ onToggle, isCollapsed }) {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

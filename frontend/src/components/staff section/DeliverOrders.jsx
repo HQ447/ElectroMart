@@ -79,7 +79,7 @@ function DeliverOrder() {
 
   if (orders.length === 0) {
     return (
-      <div className="p-6 w-[74%]">
+      <div className="p-6">
         <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
           <div className="w-24 h-24 bg-gray-100 rounded-full mx-auto mb-6 flex items-center justify-center">
             <span className="text-4xl">📦</span>
@@ -94,7 +94,7 @@ function DeliverOrder() {
   }
 
   return (
-    <div className="p-6 w-[74%] bg-gray-50 min-h-screen">
+    <div className="p-6  bg-gray-50 ">
       {/* Header Section */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">

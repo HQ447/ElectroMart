@@ -101,7 +101,7 @@ function Orders() {
 
   if (loading) {
     return (
-      <div className="p-6 w-[74%] flex items-center justify-center min-h-[400px]">
+      <div className="p-6 w-full flex items-center justify-center ">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600 text-lg">Loading confirmed orders...</p>
@@ -112,7 +112,7 @@ function Orders() {
 
   if (orders.length === 0) {
     return (
-      <div className="p-6 w-[74%]">
+      <div className="p-6 ">
         <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
           <div className="w-24 h-24 bg-gray-100 rounded-full mx-auto mb-6 flex items-center justify-center">
             <span className="text-4xl">📋</span>
@@ -129,7 +129,7 @@ function Orders() {
   }
 
   return (
-    <div className="p-6 w-[74%] bg-gray-50 min-h-screen">
+    <div className="p-6  bg-gray-50 ">
       {/* Header Section */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">

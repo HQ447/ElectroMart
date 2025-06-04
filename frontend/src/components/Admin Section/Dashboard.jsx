@@ -50,9 +50,9 @@ function Dashboard() {
   if (!adminId) return <Notfound />;
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex ">
       <Sidebar onToggle={handleSidebarToggle} />
-      <main className={``}>
+      <main className={`max-h-screen overflow-y-auto w-[75%]`}>
         <Outlet />
       </main>
     </div>

@@ -36,7 +36,7 @@ function StaffSidebar() {
   };
 
   return (
-    <div className="w-[26%] h-screen bg-gradient-to-br from-white via-gray-50 to-blue-50 shadow-2xl border-r border-gray-200 flex flex-col">
+    <div className="w-[22%] bg-gradient-to-br from-white via-gray-50 to-blue-50 shadow-2xl border-r border-gray-200 flex flex-col">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-br-3xl shadow-lg">
         <div className="flex flex-col items-center">
