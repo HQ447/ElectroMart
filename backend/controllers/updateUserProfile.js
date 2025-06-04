@@ -18,19 +18,13 @@ export const updateUserProfile = async (req, res) => {
     // Handle profile image upload
     if (req.file) {
       // Delete old profile image if it exists
-      if (user.img) {
-        const oldImagePath = path.join(process.cwd(), user.img);
-        if (fs.existsSync(oldImagePath)) {
-          fs.unlinkSync(oldImagePath);
-        }
-      }
 
       // Set new image path
-      user.img = `uploads/profiles/${req.file.filename}`;
+      user.img = `uploads/${req.file.filename}`;
     }
 
     // Update basic info
-    if (fullName) user.fullName = fullName;
+    if (fullName) user.username = fullName;
     if (email && email !== user.email) {
       // Check if email already exists
       const existingUser = await User.findOne({ email, _id: { $ne: userId } });

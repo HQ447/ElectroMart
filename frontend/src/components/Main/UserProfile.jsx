@@ -35,8 +35,8 @@ const Profile = () => {
             address: user.address || "",
           });
 
-          if (user.img) {
-            setImgPreview(`${domain}/${user.img}`);
+          if (data.user.img) {
+            setImgPreview(`http://localhost:8080/${data.user.img}`);
           }
         } else {
           setMessage("Failed to fetch user");
