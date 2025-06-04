@@ -35,7 +35,7 @@ function StaffDashboard() {
   return (
     <div className="flex  ">
       <StaffSidebar className=" max-h-screen overflow-y-auto" />
-      <div className="max-h-screen w-[78%]  overflow-y-auto  bg-red-800">
+      <div className="max-h-screen w-[78%]  overflow-y-auto  ">
         <Outlet />
       </div>
     </div>
